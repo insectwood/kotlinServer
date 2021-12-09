@@ -16,8 +16,8 @@ class PostApiController {
     }
 
     @PostMapping("/post/object")
-    fun objectMappingObject(@RequestBody userRequest: UserInformation): UserInformation{
-        println(userRequest)
-        return userRequest
+    fun objectMappingObject(@RequestBody userInfromation: UserInformation): UserInformation{
+        println(userInfromation)
+        return userInfromation
     }
 }
