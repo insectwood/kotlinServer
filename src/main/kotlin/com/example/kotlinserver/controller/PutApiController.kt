@@ -3,10 +3,14 @@ package com.example.kotlinserver.controller
 import com.example.kotlinserver.model.Result
 import com.example.kotlinserver.model.UserInformation
 import com.example.kotlinserver.model.UserResponse
+import org.springframework.http.ResponseEntity
+import org.springframework.validation.BindingResult
+import org.springframework.validation.FieldError
 import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import javax.validation.Valid
 
 @RestController
 @RequestMapping("/api")
@@ -18,7 +22,8 @@ class PutApiController {
     }
 
     @PutMapping("/put/object")
-    fun putMappingObject(@RequestBody userInformation: UserInformation): UserResponse{
+    fun putMappingObject(@Valid @RequestBody userInformation: UserInformation, bindingResult: BindingResult): UserResponse{
+
         return UserResponse().apply {
             this.result = Result().apply {
                 this.result_code = "OK"
@@ -55,5 +60,20 @@ class PutApiController {
 
             this.user = userList
         }
+    }
+
+    @PutMapping("/put/objectv")
+    fun putMappingObjectValidation(@Valid @RequestBody userInformation: UserInformation, bindingResult: BindingResult): ResponseEntity<String> {
+        if (bindingResult.hasErrors()) {
+            val msg = StringBuilder()
+            bindingResult.allErrors.forEach {
+                val field = it as FieldError
+                val message = it.defaultMessage
+                msg.append(field.toString() + " : " + message + "\n")
+            }
+            return ResponseEntity.badRequest().body(msg.toString())
+        }
+
+        return ResponseEntity.badRequest().body("OK")
     }
 }
