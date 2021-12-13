@@ -15,9 +15,8 @@ class StringFormatDateTimeValidator : ConstraintValidator<StringFormatDateTime, 
     }
 
     override fun isValid(value: String?, context: ConstraintValidatorContext?): Boolean {
-        TODO("Not yet implemented")
+        LocalDateTime.parse(value, DateTimeFormatter.ofPattern(pattern))
         return try{
-            LocalDateTime.parse(value, DateTimeFormatter.ofPattern(pattern))
             true
         }catch(e:Exception){
             false

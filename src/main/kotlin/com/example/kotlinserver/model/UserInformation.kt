@@ -20,5 +20,5 @@ data class UserInformation(
     var phone_number:String?=null,
 
     @field:StringFormatDateTime(pattern = "yyyy-MM-dd HH:mm:ss", message = "not matched pattern")
-    var createdAt:String?=null
+    var created_at:String?=null
 )
