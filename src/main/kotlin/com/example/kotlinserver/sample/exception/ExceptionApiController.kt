@@ -1,7 +1,7 @@
-package com.example.kotlinserver.exception
+package com.example.kotlinserver.sample.exception
 
-import com.example.kotlinserver.model.Error
-import com.example.kotlinserver.model.ErrorResponse
+import com.example.kotlinserver.sample.model.Error
+import com.example.kotlinserver.sample.model.ErrorResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.annotation.Validated

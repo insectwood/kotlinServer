@@ -1,6 +1,6 @@
-package com.example.kotlinserver.model
+package com.example.kotlinserver.sample.model
 
-import com.example.kotlinserver.annotation.StringFormatDateTime
+import com.example.kotlinserver.sample.annotation.StringFormatDateTime
 import javax.validation.constraints.*
 
 data class UserInformation(

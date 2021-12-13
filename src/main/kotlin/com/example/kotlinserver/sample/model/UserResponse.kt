@@ -1,6 +1,4 @@
-package com.example.kotlinserver.model
-
-import com.fasterxml.jackson.annotation.JsonProperty
+package com.example.kotlinserver.sample.model
 
 data class UserResponse(
     var result:Result?=null,

@@ -1,6 +1,6 @@
-package com.example.kotlinserver.controller
+package com.example.kotlinserver.sample.controller
 
-import com.example.kotlinserver.model.UserInformation
+import com.example.kotlinserver.sample.model.UserInformation
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping

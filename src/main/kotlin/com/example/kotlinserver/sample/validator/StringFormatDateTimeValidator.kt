@@ -1,6 +1,6 @@
-package com.example.kotlinserver.validator
+package com.example.kotlinserver.sample.validator
 
-import com.example.kotlinserver.annotation.StringFormatDateTime
+import com.example.kotlinserver.sample.annotation.StringFormatDateTime
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import javax.validation.ConstraintValidator

@@ -1,8 +1,8 @@
-package com.example.kotlinserver.controller
+package com.example.kotlinserver.sample.controller
 
-import com.example.kotlinserver.model.Result
-import com.example.kotlinserver.model.UserInformation
-import com.example.kotlinserver.model.UserResponse
+import com.example.kotlinserver.sample.model.Result
+import com.example.kotlinserver.sample.model.UserInformation
+import com.example.kotlinserver.sample.model.UserResponse
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.BindingResult
 import org.springframework.validation.FieldError

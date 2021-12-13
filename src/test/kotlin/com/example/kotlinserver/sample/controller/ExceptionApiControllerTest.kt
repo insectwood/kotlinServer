@@ -1,6 +1,6 @@
-package com.example.kotlinserver.controller
+package com.example.kotlinserver.sample.controller
 
-import com.example.kotlinserver.model.UserInformation
+import com.example.kotlinserver.sample.model.UserInformation
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired

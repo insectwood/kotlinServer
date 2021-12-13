@@ -1,4 +1,4 @@
-package com.example.kotlinserver.controller
+package com.example.kotlinserver.sample.controller
 
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.DeleteMapping

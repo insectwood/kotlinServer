@@ -1,6 +1,6 @@
-package com.example.kotlinserver.annotation
+package com.example.kotlinserver.sample.annotation
 
-import com.example.kotlinserver.validator.StringFormatDateTimeValidator
+import com.example.kotlinserver.sample.validator.StringFormatDateTimeValidator
 import javax.validation.Constraint
 import javax.validation.Payload
 import kotlin.reflect.KClass
