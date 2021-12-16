@@ -17,7 +17,7 @@ class TodoApiController(
         return todoService.read(index)
     }
 
-    @GetMapping("")
+    @GetMapping("/all")
     fun readAll(): MutableList<TodoDto>{
         return todoService.readAll()
     }
@@ -32,7 +32,7 @@ class TodoApiController(
         return todoService.update(todoDtd)
     }
 
-    @DeleteMapping("")
+    @DeleteMapping(path=["/{index}"])
     fun delete(@PathVariable(name = "index") index: Int): Boolean {
 
         //return type change : boolean -> ResponseEntity

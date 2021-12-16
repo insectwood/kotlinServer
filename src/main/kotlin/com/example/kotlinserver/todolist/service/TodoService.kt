@@ -8,9 +8,9 @@ import com.example.kotlinserver.todolist.repository.TodoRepositoryImpl
 import org.springframework.stereotype.Service
 
 @Service
-class TodoService {
-
-    val todoRepositoryImpl = TodoRepositoryImpl()
+class TodoService(
+    val todoRepositoryImpl: TodoRepositoryImpl
+) {
 
     //CURD
 
